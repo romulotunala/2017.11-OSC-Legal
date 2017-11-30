@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,600,900');
+
+*,
+*:after,
+*:before{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	position: relative;
+
+	/*background-color: pink;*/
+}
+.cabecalho{
+	min-height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cabecalho-logo{
+	width: 26%;
+	margin: 0 3% 3% 8.8%;
+}
+.cabecalho-menu{
+	/*min-height:10vh;*/ 
+	width: 44%;
+	margin-left: 3%;
+	margin-right: 15%;
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.cabecalhoMenu-item{
+	margin-right: 10px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 18px;
+	font-style: normal;
+	color:rgb(26, 26, 26);
+	text-decoration: none;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 42px;
+	letter-spacing: 0.05em;
+}
+.cabecalhoMenu-item:hover{
+	color: rgb(133, 20, 75);
+	text-decoration: underline;
+}
+.cabecalhoMenuItem-drop{
+	min-width:70%; 
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	display: none;
+	justify-content: space-between;
+}
+.cabecalhoMenuItem-drop:hover{
+	display: flex;	
+}
+.cabecalhoMenuItem-drop:hover + .cabecalhoMenu-item{
+	color: rgb(133, 20, 75);
+	text-decoration: underline;
+}
+.cabecalhoMenu-item:hover + .cabecalhoMenuItem-drop{
+	display: flex;
+}
+.menuItemDrop-item{
+	margin-right: 10px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color: rgb(255, 65, 54);
+	font-style: normal;
+	text-align: left;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 40px;
+	letter-spacing: 0.04em;
+}
+
+/* Estilo main Home */
+
+.containerHome{
+	min-height: 70vh;
+	background-color: rgb(255,65,54);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.containerHome-article{
+	width: 26%;
+	min-height: 60vh;
+	margin: 4% 0;
+	padding: 2%;
+	background-color: #fff;
+	position: relative; 
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.containerHome-indicador{
+	padding: 5px;
+	padding-bottom: 1px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 10px;
+	font-style: normal;
+	color: rgb(255, 255, 255);
+	text-align: left;
+	text-transform: uppercase;
+	/*line-height: 20px;*/
+	background-color: rgb(255, 65, 54);
+}
+.containerHomeArticle-link{
+
+}
+.HomeArticleLink-titulo{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 22px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	letter-spacing: 0.05em, 0em;
+}
+.containerHome-autoria{
+	margin-bottom: 30px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: rgb(0, 0, 0);
+	font-style: normal;
+	text-align: left;
+	line-height: 28px;
+	letter-spacing: 0.05em, 0em;
+}
+.containerHomeArticle-paragrafo{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	color: rgb(0, 0, 0);
+	font-style: normal;
+	text-align: left;
+	line-height: 28px;
+	letter-spacing: 0em;
+}
+.containerHomeArticle-readMore{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 10px;
+	color: rgb(255, 65, 54);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0.05em;
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+}
+.containerHome-section{
+	min-width: 55%;
+	max-height: 80vh;
+	margin: 4% 0;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	justify-content: flex-start;
+}
+.containerHomeSection-item{
+	width: 46%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.homeSectionItemLink-titulo{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	font-size: 22px;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0.05em;
+}
+.homeSection-indicador{
+	background-color: rgb(133, 20, 75);
+}
+.homeSection-autoria{
+	color: rgb(133, 20, 75);	
+}
+.HomeSectionItem-video{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+/* Estilo main blogTextos */
+
+.containerBlogTextos{
+	min-height: 70vh;	
+}
+.containerBlogTextos-section{
+	min-height: 50vh;
+	max-height: 100vh;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	justify-content: center;
+	align-items: flex-start;
+}
+.blogTextosSection-titulo{
+	width: 30%;
+	margin: 3.5%;
+	margin-bottom: 0;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 24px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+.blogTextosSection-autoria{
+	margin: 0 3.5%;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: rgb(218, 47, 40);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+.blogTextosSection-back{
+	margin: 3.5%;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+}
+.blogTextosSection-artigo{
+	width: 45.5%;
+	min-height: 60vh;
+	margin: 3.5%;
+}
+.blogTextosSectionArtigo-paragrafo{
+	margin-bottom: 20px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-align: left;
+	line-height: 32px;
+	letter-spacing: 0em;
+}
+
+/* Estilo main blogVideos */
+
+.containerBlogVideos{
+	min-height: 70vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.containerBlogVideos-back{
+	position: absolute;
+	left: 9%;
+}
+.containerBlogVideos-item{
+	width: 57%;
+	height: 65vh;
+	margin-bottom:5%; 
+	background-color: #F0E68C;
+	align-self: flex-start;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Estilo main blogAgenda */
+
+.containerBlogAgenda{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.containerBlogAgenda-section{
+	width: 42%;
+	min-height: 50vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center; 
+}
+.containerBlogAgenda-back{
+	margin-left: 20%;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+}
+.sectionAgenda{
+	width: 60%;
+	align-items: flex-start;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-align: left;
+	letter-spacing: 0.03em;
+}
+.blogAgendaSection-paragrafo{
+	margin:5% 0;
+}
+
+/* Estilo main blogFotos */
+
+.containerBlogFotos{
+	min-height: 70vh; 
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.containerBlogFotos-section{
+	width: 42%;
+	min-height: 50vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center; 
+}
+.containerBlogFotos-back{
+	margin-left: 20%;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+}
+.sectionFotos{
+	width: 60%;
+	align-items: flex-start;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-align: left;
+	letter-spacing: 0.03em;
+}
+.blogAgendaFotos-paragrafo{
+	margin:5% 0;
+}
+
+/* Estilo main blogNoticias */
+
+.containerBlogNoticias{
+	min-height: 70vh;
+	padding-bottom:100px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.containerBlogNoticias-section{
+	width: 41%;
+	min-height: 40vh;
+	padding-left: 10%; 
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start; 
+
+	/*background-color: red;*/
+}
+.blogNoticiasSection-btn{
+	width: 50%;
+	height: 45px;
+	margin-top: 10%;
+	margin-bottom: 20%;
+	border:none;
+	border-radius: 5px;
+	background-color: rgb(255,65,54);
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	text-align: center;
+	line-height: 24px;
+	letter-spacing: 0.05em;
+}
+.blogNoticiasSection-back{
+	/*margin-left: 20%;*/
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+}
+.sectionNoticias{
+	width: 50%;
+	padding: 0;
+	align-items: flex-start;
+
+	/*background-color: blue;*/
+}
+.blogNoticiasSection-titulo{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 24px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-decoration: underline;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+.blogNoticiasSection-paragrafo{
+	margin-bottom: 40px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: rgb(218, 47, 40);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+
+/* Estilo main sobre */
+
+.contaner-sobre{
+	min-height: 70vh;
+}
+.containerSobre-section{
+	min-height: 60px;
+	background-color: rgb(255,65,54);
+	padding: 10%;
+	padding-top: 8.5%;
+	padding-bottom: 7%; 
+	position: relative;
+}
+.sobreSection-titulo{
+	margin-bottom: 20px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	color: rgb(26, 26, 26);
+	font-style: normal;
+	text-align: left;
+	line-height: 40px;
+	letter-spacing: 0em;
+}
+.sobreSection-paragrafo{
+	max-width: 75%;
+	margin-bottom: 5%;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 34px;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	text-align: left;
+	line-height: 46px;
+	letter-spacing: 0em;
+}
+.sobreSection-dados{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 27px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	line-height: 40px;
+	letter-spacing: 0em;
+}
+.sobreSection-iconCheck{
+	width: 25%;
+	z-index:10;
+	position: absolute;
+	bottom: -20%;
+	right: 10%;
+}
+.sectionContent{
+	padding: 10%;
+	background-color: #fff;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+.sobreSection-parte{
+	min-width: 45%;
+	max-width: 49%;
+	min-height: 70vh;
+	/*display: flex;
+	flex-flow: row wrap;
+	justify-content:  flex-start;
+	align-items: flex-start;
+	align-content: flex-start; */
+	position: relative;
+
+	/*background-color: pink;*/
+}
+.sobreSectionParte-paragrafo{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: rgb(0, 0, 0);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
+.sobreSectionParte-indice{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 30px, 22px;
+	letter-spacing: 0em;
+}
+.sobreSectionParte-nivel1{
+	margin-top: 10px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px, 22px;
+	letter-spacing: 0em;
+}
+.sobreSectionParte-nivel1 span{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 900;
+	font-size: 20px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px, 22px;
+	letter-spacing: 0em;
+}
+.sobreSectionParte-nivel2{
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: rgb(133, 20, 75);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px, 22px;
+	letter-spacing: 0em;
+}
+.sobreSectionParte-certificado{
+	width: 25%;
+	/*align-self: flex-end;*/
+	position: absolute;
+	bottom: -4%;
+	left: -4%;
+}
+
+
+.rodape{
+	width: 100%;
+	height: 2.5vh;
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(255,65,54);
+}
